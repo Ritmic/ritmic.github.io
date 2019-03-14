@@ -1,0 +1,11 @@
+.footer{
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    grid-column: 1fr 1fr 1fr 1fr;
+    background: #333;
+}
+
+.footer:last-child{
+
+}
