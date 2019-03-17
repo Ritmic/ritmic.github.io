@@ -14,7 +14,11 @@
     <script src="script/app.js"></script>
     <script>
         function menu(){
-            $(".navmobile").slideToggle(400, function() {});
+            $(".navmobile").slideToggle(200, function() {});
+        }
+
+        function toggle(){
+            $(".navmobile__menu__sub").slideToggle(200, function() {});
         }
     </script>
 </head>
@@ -25,17 +29,15 @@
             CuFra
         </div>
         <div class="navbar__menu">
-            <ul>
-                <li id="active"><a href="index.html">Home</a></li>
-                <li id="service"><a href="chisiamo.html">Servizi</a>
-                    <div class="navbar__menu__dropdown">
-                        <a href="">Sviluppo</a>
-                        <a href="">Assistenza</a>
-                        <a href="">Ammodernamento</a>
-                    </div>
-                </li>
-                <li><a href="progetti.html">Progetti</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a id="service"href="">Servizi
+            </a>
+            <div class="navbar__menu__dropdown">
+                    <a href="webdev.html">Sviluppo</a>
+                   <!--  <a href="assist.html">Assistenza</a> -->
+                    <a href="remake.html">Rinnovo</a>
+                </div>
+            <a href="">Progetti</a>
         </div>
         <div class="navbar__btn" onclick="menu()">
             <i class="fas fa-bars"></i>
@@ -48,42 +50,46 @@
         <div class="navmobile__close" onclick="menu()">
             <i class="fas fa-times navmobile__close"></i>
         </div>
-        <ul class="navmobile__menu">
-                <li id="active"><a href="index.html">Home</a></li>
-                <li><a href="chisiamo.html">Servizi</a>
-                    <div class="navmobile__menu__dropdown">
-                        <a href="">Sviluppo</a>
-                        <a href="">Assistenza</a>
-                    </div>
-                </li>
-                <li><a href="progetti.html">Progetti</a></li>
-            </ul>
+        <div class="navmobile__menu" >
+            <div href="index.html"><a>Home</a> </div>
+            <div onClick="toggle()">Servizi</div>
+            <div class="navmobile__menu__sub" style="display:none">
+                <a href="webdev.html">Sviluppo</a>
+                <!-- <a href="assist.html">Assistenza</a> -->
+                <a href="remake.html">Rinnovo</a>
+            </div>
+            <!-- <div><a href="project.html">Progetti</a></div>   -->
+        </div>       
     </div>
     <div class="container">
         <div class="landscape">
             <h1 class="landscape__title">CuFra</h1>
             <p class="landscape__text">A new way to start your future</p>
-            <button class="landscape__button">Let's begin</button>
         </div>
         <div class="card" id="first">
-            <div class=card__img> <img src="https://via.placeholder.com/500x450" alt=""> </div>
+            <div class=card__img> <img src="./img/chiSiamo.jpg" alt=""> </div>
             <div class="card__content">
                 <h2 class="card__content__title">Chi siamo </h2>
-                <p class="card__content__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-                    odit doloremque at earum esse reprehenderit eum, voluptate et illo, hic eligendi consequatur
-                    voluptas ullam nesciunt nam? Dolor dicta facilis ratione.</p>
+                <p class="card__content__text">
+                    Siamo una una giovane realtà, entusisati di comniciare una carriera nel mondo del Web development e 
+                    di auitare altre imprese a crescere e migliorarsi. I nostri punti di forza sono la passione per ciò che facciamo
+                    e lo stretto contatto che abbiamo con i nostri clienti.
+                </p>
             </div>
         </div>
         <div class="card">
-            <div class=card__img> <img src="https://via.placeholder.com/500x450" alt=""> </div>
+            <div class=card__img> <img src="./img/sviluppoImmagine.png" alt=""> </div>
             <div class="card__content">
                 <h2 class="card__content__title">Sviluppo applicazioni web su misura</h2>
-                <p class="card__content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-                    doloribus quod quam, numquam, tempora quaerat ex suscipit velit vitae facere nesciunt illum debitis
-                    distinctio soluta necessitatibus ut pariatur vero totam.</p>
+                <p class="card__content__text">
+                        Per Noi, sviluppare un Sito Web significa analizzare le esigenze del cliente e costruire un prodotto su misura basandosi su di esse.
+                        La comunicazione è un requisito importante per ogni nostro progetto per fare in modo di essere sempre fedeli a cio che il committente desidera.
+                    <a href="./webdev.html">Scopri di più</a>
+
+                </p>
             </div>
         </div>
-        <div class="card">
+       <!--  <div class="card">
             <div class=card__img> <img src="https://via.placeholder.com/500x450" alt=""> </div>
             <div class="card__content">
                 <h2 class="card__content__title">Assistenza e aggiornamento post sviluppo </h2>
@@ -91,34 +97,17 @@
                     quo labore sint, minus tenetur id aspernatur sed eum, laborum, earum amet obcaecati aut? Quibusdam
                     consequatur placeat hic asperiores architecto! </p>
             </div>
-        </div>
+        </div> -->
         <div class="card">
-            <div class=card__img> <img src="https://via.placeholder.com/500x450" alt=""> </div>
+            <div class=card__img> <img src="./img/rinnovo.png" alt=""> </div>
             <div class="card__content">
-                <h2 class="card__content__title">Lorem ipsum dolor sit amet. </h2>
-                <p class="card__content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ea,
-                    dolorem dignissimos ullam ex id voluptate, sit blanditiis a dolor suscipit. Exercitationem
-                    doloremque eum mollitia, placeat dolores in cum ratione? </p>
+                <h2 class="card__content__title">Rinnovo di un sito web esistente </h2>
+                <p class="card__content__text">
+                    Oltre allo sviluppo di un sito web da zero offriamo anche la possibilità di rinnovare un sito web già esistente, mantentedo quindi le funzionalità e contenuti intatti ma
+                    rimodellando l'interfaccia da zero <a href="./remake.html">Scopri di più</a>
+                </p>
             </div>
         </div>
-        <div class="card">
-            <div class=card__img>
-                <img src="https://via.placeholder.com/500x450" alt="">
-            </div>
-            <div class="card__content">
-                <h2 class="card__content__title">Lorem ipsum dolor sit amet. </h2>
-                <p class="card__content__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia
-                    quisquam autem a repellendus pariatur, doloremque, magnam ratione numquam nihil cumque ducimus
-                    minus aut commodi ipsam repudiandae laborum assumenda vitae illum. </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer"> 
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
     </div>
 </body>
 </html>

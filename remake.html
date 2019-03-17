@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cufra - WebDeveleopment</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="script/app.js"></script>
+    <script>
+        function menu(){
+            $(".navmobile").slideToggle(200, function() {});
+        }
+
+        function toggle(){
+            $(".navmobile__menu__sub").slideToggle(200, function() {});
+        }
+    </script>
+</head>
+
+<body>
+        <div class="navbar">
+                <div class="navbar__logo ">
+                    CuFra
+                </div>
+                <div class="navbar__menu">
+                    <a href="index.html">Home</a>
+                    <a id="service"href="">Servizi
+                    </a>
+                    <div class="navbar__menu__dropdown">
+                            <a href="webdev.html">Sviluppo</a>
+                           <!--  <a href="assist.html">Assistenza</a> -->
+                            <a href="remake.html">Rinnovo</a>
+                        </div>
+                    <a href="">Progetti</a>
+                </div>
+                <div class="navbar__btn" onclick="menu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="navmobile "style="display:none">
+                <div class="navmobile__logo">
+                    CuFra
+                </div>
+                <div class="navmobile__close" onclick="menu()">
+                    <i class="fas fa-times navmobile__close"></i>
+                </div>
+                <div class="navmobile__menu" >
+                    <div href="index.html"><a>Home</a> </div>
+                    <div onClick="toggle()">Servizi</div>
+                    <div class="navmobile__menu__sub" style="display:none">
+                        <a href="webdev.html">Sviluppo</a>
+                        <!-- <a href="assist.html">Assistenza</a> -->
+                        <a href="remake.html">Rinnovo</a>
+                    </div>
+                    <div><a href="">Progetti</a></div>  
+                </div>       
+            </div>
+    <section class="content">
+            <h1 class="content__title">Rinnovo e modernizazione di un sito web</h1>
+            <div class="content__subcontent">
+                <h2>Cosa si intende per rinnovo</h2>
+                <p id="noimg"> 
+                    Se si è gia in possesso di un sito web datato e lo si vuole migliorare Noi ci offriamo di fornire al nostro Cliente la possibilità di 
+                    modificarlo mantenendo intatti contenuto e funzionalità per renderunlo più moderno e funzionale. Questo procedimento si compone di diverse fasi,
+                    la prima delle quali è l'analisi del vecchio sito assieme al committente per decidere quali contentunti tenere e quali invece scartare. Dopodichè verranno
+                    elaborate diverse opzioni e sottoposte al Cliente. Dopo che una delle proposte viene accettata si può decidere se modificare il codice del sito già esistente 
+                    o di partire con un nuovo progetto. Al termine della fase di sviluppo il prodotto finale verrà sottoposto un'ultima volta alla revisione del committente e, 
+                    se esso soddisfa le sue specifiche, verrà consegnato.
+                </p>
+        </section>
+</body>
+</html>

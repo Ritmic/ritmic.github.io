@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cufra - WebDeveleopment</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="script/app.js"></script>
+    <script>
+        function menu(){
+            $(".navmobile").slideToggle(200, function() {});
+        }
+
+        function toggle(){
+            $(".navmobile__menu__sub").slideToggle(200, function() {});
+        }
+    </script>
+     <link href="https://fonts.googleapis.com/css?family=Kalam|Roboto+Mono|Roboto+Slab" rel="stylesheet"> 
+</head>
+
+<body>
+        <div class="navbar">
+                <div class="navbar__logo ">
+                    CuFra
+                </div>
+                <div class="navbar__menu">
+                    <a href="index.html">Home</a>
+                    <a id="service"href="">Servizi
+                    </a>
+                    <div class="navbar__menu__dropdown">
+                            <a href="webdev.html">Sviluppo</a>
+                           <!--  <a href="assist.html">Assistenza</a> -->
+                            <a href="remake.html">Rinnovo</a>
+                        </div>
+                    <a href="">Progetti</a>
+                </div>
+                <div class="navbar__btn" onclick="menu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="navmobile "style="display:none">
+                <div class="navmobile__logo">
+                    CuFra
+                </div>
+                <div class="navmobile__close" onclick="menu()">
+                    <i class="fas fa-times navmobile__close"></i>
+                </div>
+                <div class="navmobile__menu" >
+                    <div href="index.html"><a>Home</a> </div>
+                    <div onClick="toggle()">Servizi</div>
+                    <div class="navmobile__menu__sub" style="display:none">
+                        <a href="webdev.html">Sviluppo</a>
+                        <!-- <a href="assist.html">Assistenza</a> -->
+                        <a href="remake.html">Rinnovo</a>
+                    </div>
+                    <div><a href="">Progetti</a></div>  
+                </div>       
+            </div>
+    <section class="content">
+            <h1 class="content__title">Sviluppo soluzioni web su misura</h1>
+            <div class="content__subcontent">
+                <h2>Cosa si intende per sviluppo di un'apllicazione web</h2>
+                <p id="noimg"> Per Noi, sviluppare un Sito Web significa costruire un prodotto su misura per il Cliente. È fondamentale identificare le Sue esigenze attraverso degli incontri personali, qualora fosse possibile, o attraverso altri canali di contatto.
+                    Una volta inquadrate le richieste inizierà la fase di progettazione dello schema del sito web e successivamnte alla creazione di Mockup (ovvero una rappresentazione grafica stilizzata del sito con lo scopo di fornire una prima visualizzazione del prodotto finale).
+                    A seguito di questa fase, tutto il materiale proddoto verrà sottoposto all'esaminazione del Cliente il quale potrà approvare o meno il progetto. In caso esso non sia soddisfatto si procederà a modificare la proposta secondo le Sue specifiche.
+                    Una volta ultimanta la fase di prototipizzazione si passerà alla fase di prodizione, al termine della quale il risultato finale verrà nuovamente presentato al Cliente per ricevere l'approvazione finale.
+                 </p>     
+            </div>
+            <div class="content__subcontent">
+                <h2>Sito Vetrina e Sito Vetrina con funzionalità aggiuntive</h2>
+                <p id="noimg">
+                    Lo scopo di questa tipologia di sito è quella di illustrare a dei potenziali clienti i prodotti e/o servizi forniti. Ad esempio una galleria di immagini per un fotografo o un portfolio di progetti per un architettto. 
+                    A questa gamma di siti web possono essere aggiunte delle funzionalità di base per permettere all'utente un certo grado di interattività con esso, come un semplice sistema di prenotazione o di un calendrio aggiornato in tempo reale con eventi e promozioni.
+                </p>
+                </div>        
+            <div class="content__subcontent">
+                <h2>Applicazione web</h2>
+                <p id="noimg">Le applicazioni web sono dei prodotti con funzionalità avnzate che richiedo la crezine e mantenimento di un server e di un database. Il sito si interfaccia con essi per ottenere e modificare dati e generare in modo automatico delle pagine basandosi su di essi. 
+                    Ad esempoio un sito con un sistema di registrazione e log-in per permettere un esperieza personalizzata ad ogni utente. Oppure un blog dove il contenuto di una pagina viene generato in automaico basandosi su delle infromazioni contenute in un database</p>
+                </div>
+            <a class="content__contact" href="mailto:someone@example.com?">Contattaci</a>
+        </section>
+</body>
+</html>
