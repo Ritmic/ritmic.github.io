@@ -24,6 +24,11 @@
         }
         &__text{
             line-height: 30px;
+            & a{
+                color: #222222;
+                text-decoration: none;
+                font-weight: 600;
+            }
         }
     }
     @media screen and (min-width:820px) {

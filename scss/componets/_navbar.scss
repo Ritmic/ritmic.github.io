@@ -40,6 +40,7 @@
             justify-content: center;
 
             & a{
+                user-select: none;
                 min-width: 250px;
                 outline: none;
                 line-height: 65px;
