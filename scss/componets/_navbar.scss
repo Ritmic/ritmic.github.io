@@ -63,86 +63,22 @@
 
             &__dropdown{
                 position: absolute;
+                min-width: 250px;
                 top:68px;
-                background: #222;
-                width: 250px;
-                height: 100%;
-                display:flex;
+                display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                align-content: flex-end;
-                flex-grow: 1;
-                flex-shrink: 1;
-                height: 0px;
-                transition-duration: 0.5s; 
+                background: #222;
+                transform-origin: top center;
+                transition-duration: 0.3s;
+                transform: scaleY(0);
             }
-
-            &__dropdown:hover{
-                height: auto;
+            &__dropdown:hover, #service:hover + &__dropdown{
+                transform: scaleY(1); 
             }
-
-            &__dropdown:hover > a{
-                display: initial;
-            }
-            &__dropdown > a{
-                transition-duration: 0.3s;  
-                text-align: center;
-                vertical-align: middle;
-                width: 100%;
-                display: none;
-            }
-
-            #service:hover + div{
-                height: auto;
-            }
-
-            #service:hover + div > a {
-                display: initial;
-            }
-
-            &__dropdown > a:hover{
-               color:#000;
-               background: #fff;
-            }
-
         }
         &__logo{
             font-size: 40px;
             user-select: none;
         }
-
-
-      /*   ul{
-            margin: 0px;
-            height: 100%;
-            display: flex;
-            li {
-                min-width: 250px;
-                box-sizing: border-box;
-                flex-grow: 1;
-                flex-shrink: 1;
-                flex-basis: 100%;
-                display: flex;
-                cursor: pointer;
-                display: inherit;
-                justify-content: center;
-                transition-duration: 0.5s;
-                a {
-                    outline: none;
-                    user-select: none;
-                    text-decoration: none;
-                    align-self: center;     
-                    font-size: 20px;
-                    color: white;
-                }
-            }
-        }
-        li:hover{
-            background: #fff;
-        }
-
-        li:hover > a{
-            color:#222;
-        } */
     }
 }

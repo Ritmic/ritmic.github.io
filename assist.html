@@ -9,17 +9,18 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
     <script src="script/app.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Kalam|Roboto+Mono|Roboto+Slab" rel="stylesheet"> 
     <script>
-        function menu(){
-            $(".navmobile").slideToggle(200, function() {});
-        }
-
-        function toggle(){
-            $(".navmobile__menu__sub").slideToggle(200, function() {});
+        
+        function toggle(c){
+            let div = document.getElementsByClassName(c)[0];
+            if(div.id === ""){
+                div.id = "open";
+            }
+            else
+            {
+                div.id = "";
+            }
         }
     </script>
 </head>
@@ -30,36 +31,36 @@
             CuFra
         </div>
         <div class="navbar__menu">
-            <a href="">Home</a>
+            <a href="index.html">Home</a>
             <a id="service"href="">Servizi
             </a>
             <div class="navbar__menu__dropdown">
                     <a href="webdev.html">Sviluppo</a>
-                    <a href="assist.html">Assistenza</a>
+                   <!--  <a href="assist.html">Assistenza</a> -->
                     <a href="remake.html">Rinnovo</a>
                 </div>
             <a href="">Progetti</a>
         </div>
-        <div class="navbar__btn" onclick="menu()">
+        <div class="navbar__btn" onclick='toggle("navmobile")'>
             <i class="fas fa-bars"></i>
         </div>
     </div>
-    <div class="navmobile "style="display:none">
+    <div class="navmobile ">
         <div class="navmobile__logo">
             CuFra
         </div>
-        <div class="navmobile__close" onclick="menu()">
+        <div class="navmobile__close" onclick='toggle("navmobile")'>
             <i class="fas fa-times navmobile__close"></i>
         </div>
         <div class="navmobile__menu" >
             <div><a href="index.html">Home</a> </div>
-            <div onClick="toggle()">Servizi</div>
-            <div class="navmobile__menu__sub" style="display:none">
+            <div onClick='toggle("navmobile__menu__sub")'>Servizi</div>
+            <div class="navmobile__menu__sub">
                 <a href="webdev.html">Sviluppo</a>
-                <a href="assist.html">Assistenza</a>
+                <!-- <a href="assist.html">Assistenza</a> -->
                 <a href="remake.html">Rinnovo</a>
             </div>
-            <div><a href="project.html">Progetti</a></div>  
+            <!-- <div><a href="project.html">Progetti</a></div>   -->
         </div>       
     </div>
     <section class="content">
