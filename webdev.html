@@ -11,14 +11,11 @@
         crossorigin="anonymous">
     <script src="script/app.js"></script>
     <script>
-        
-        function toggle(c){
+        function toggle(c) {
             let div = document.getElementsByClassName(c)[0];
-            if(div.id === ""){
+            if (div.id === "") {
                 div.id = "open";
-            }
-            else
-            {
+            } else {
                 div.id = "";
             }
         }
@@ -32,13 +29,15 @@
         </div>
         <div class="navbar__menu">
             <a href="index.html">Home</a>
-            <a id="service"href="">Servizi
-            </a>
-            <div class="navbar__menu__dropdown">
-                    <a href="webdev.html">Sviluppo</a>
-                   <!--  <a href="assist.html">Assistenza</a> -->
-                    <a href="remake.html">Rinnovo</a>
+           <div class="navbar__menu__services">
+                <a id="service"href="">Servizi
+                </a>
+                <div class="navbar__menu__services__dropdown">
+                        <a href="webdev.html">Sviluppo</a>
+                    <!--  <a href="assist.html">Assistenza</a> -->
+                        <a href="remake.html">Rinnovo</a>
                 </div>
+            </div>
             <a href="">Progetti</a>
         </div>
         <div class="navbar__btn" onclick='toggle("navmobile")'>
@@ -52,7 +51,7 @@
         <div class="navmobile__close" onclick='toggle("navmobile")'>
             <i class="fas fa-times navmobile__close"></i>
         </div>
-        <div class="navmobile__menu" >
+        <div class="navmobile__menu">
             <div><a href="index.html">Home</a> </div>
             <div onClick='toggle("navmobile__menu__sub")'>Servizi</div>
             <div class="navmobile__menu__sub">
@@ -61,31 +60,57 @@
                 <a href="remake.html">Rinnovo</a>
             </div>
             <!-- <div><a href="project.html">Progetti</a></div>   -->
-        </div>       
+        </div>
     </div>
     <section class="content">
-            <h1 class="content__title">Sviluppo soluzioni web su misura</h1>
-            <div class="content__subcontent">
-                <h2>Cosa si intende per sviluppo di un'apllicazione web</h2>
-                <p id="noimg"> Per Noi, sviluppare un Sito Web significa costruire un prodotto su misura per il nostro Cliente. È fondamentale identificare le Sue esigenze attraverso degli incontri personali, qualora fosse possibile, o attraverso altri canali di contatto.
-                    Una volta inquadrate le richieste inizierà la fase di progettazione dello schema del sito web e successivamente alla creazione di Mockup (ovvero una rappresentazione grafica stilizzata del sito con lo scopo di fornire una prima visualizzazione del prodotto finale).
-                    A seguito di questa fase, tutto il materiale proddoto verrà sottoposto all'esaminazione del Cliente il quale potrà approvare o meno il progetto. In caso non sia soddisfatto si procederà a modificare la proposta secondo le Sue specifiche.
-                    Una volta ultimata la fase di prototipizzazione si passerà alla fase di produzione, al termine della quale il risultato verrà nuovamente presentato al Cliente per ricevere l'approvazione finale.
-                 </p>     
-            </div>
-            <div class="content__subcontent">
-                <h2>Sito Vetrina e Sito Vetrina con funzionalità aggiuntive</h2>
-                <p id="noimg">
-                    Lo scopo di questa tipologia di sito è quella di illustrare a dei potenziali clienti i prodotti e/o servizi forniti. Ad esempio una galleria di immagini per un fotografo o un portfolio di progetti per un architetto. 
-                    A questa gamma di siti web possono essere aggiunte delle funzionalità di base per permettere all'utente un certo grado di interattività con esso, come un semplice sistema di prenotazione o di un calendario aggiornato in tempo reale con eventi e promozioni.
-                </p>
-                </div>        
-            <div class="content__subcontent">
-                <h2>Applicazione web</h2>
-                <p id="noimg">Le applicazioni web sono dei prodotti con funzionalità avanzate che richiedo la creazine e mantenimento di un server e di un database. Il sito si interfaccia con essi per ottenere e modificare dati e generare in modo automatico delle pagine basandosi su di essi. 
-                    Ad esempio un sito con un sistema di registrazione e log-in per permettere un esperieza personalizzata ad ogni utente. Oppure un blog dove il contenuto di una pagina viene generato in automatico basandosi su delle inforomazioni contenute in un database.</p>
-                </div>
-            <a class="content__contact" href="mailto:contactus@cufra.it?">Contattaci</a>
-        </section>
+        <h1 class="content__title">Sviluppo soluzioni web su misura</h1>
+        <div class="content__subcontent">
+            <h2>Cosa si intende per sviluppo di un'apllicazione web</h2>
+            <p id="noimg"> Per Noi, sviluppare un Sito Web significa costruire un prodotto su misura per il nostro
+                Cliente. È fondamentale identificare le Sue esigenze attraverso degli incontri personali, qualora fosse
+                possibile, o attraverso altri canali di contatto.
+                Una volta inquadrate le richieste inizierà la fase di progettazione dello schema del sito web e
+                successivamente alla creazione di Mockup (ovvero una rappresentazione grafica stilizzata del sito con
+                lo scopo di fornire una prima visualizzazione del prodotto finale).
+                A seguito di questa fase, tutto il materiale proddoto verrà sottoposto all'esaminazione del Cliente il
+                quale potrà approvare o meno il progetto. In caso non sia soddisfatto si procederà a modificare la
+                proposta secondo le Sue specifiche.
+                Una volta ultimata la fase di prototipizzazione si passerà alla fase di produzione, al termine della
+                quale il risultato verrà nuovamente presentato al Cliente per ricevere l'approvazione finale.
+            </p>
+        </div>
+        <div class="content__subcontent">
+            <h2>Sito Vetrina e Sito Vetrina con funzionalità aggiuntive</h2>
+            <p id="noimg">
+                Lo scopo di questa tipologia di sito è quella di illustrare a dei potenziali clienti i prodotti e/o
+                servizi forniti. Ad esempio una galleria di immagini per un fotografo o un portfolio di progetti per un
+                architetto.
+                A questa gamma di siti web possono essere aggiunte delle funzionalità di base per permettere all'utente
+                un certo grado di interattività con esso, come un semplice sistema di prenotazione o di un calendario
+                aggiornato in tempo reale con eventi e promozioni.
+            </p>
+        </div>
+        <div class="content__subcontent">
+            <h2>Applicazione web</h2>
+            <p id="noimg">Le applicazioni web sono dei prodotti con funzionalità avanzate che richiedo la creazine e
+                mantenimento di un server e di un database. Il sito si interfaccia con essi per ottenere e modificare
+                dati e generare in modo automatico delle pagine basandosi su di essi.
+                Ad esempio un sito con un sistema di registrazione e log-in per permettere un esperieza personalizzata
+                ad ogni utente. Oppure un blog dove il contenuto di una pagina viene generato in automatico basandosi
+                su delle inforomazioni contenute in un database.</p>
+        </div>
+        <a class="content__contact" href="mailto:contactus@cufra.it?">Contattaci</a>
+    </section>
+
+    <script>
+        let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) {return p.toString() === "[object SafariRemoteNotification]";})(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+        if (isSafari) {
+            let div = document.getElementsByClassName("navbar__menu__dropdown")[0];
+            console.log(div);
+            div.id = "safari"
+            console.log(div.id);
+        }
+    </script>
 </body>
+
 </html>

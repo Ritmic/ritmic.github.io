@@ -7,6 +7,7 @@
     z-index: 10;
     display: grid;
     grid-template-columns: 25% auto 30px 20px;
+    grid-template-rows: 70px;
     &__logo{
         margin: 10px 0;
         margin-left: 30px;
@@ -30,7 +31,7 @@
     }
     
     @media screen and (min-width: 950px) {
-        grid-template-columns: 50px 1fr 1fr;
+        grid-template-columns: 150px 1fr 1fr;
         &__btn{
             display: none;
         }
@@ -60,19 +61,37 @@
                 background: #fff;
                 color:#222;
             }
-
-            &__dropdown{
-                position: absolute;
-                min-width: 250px;
-                top:68px;
+            &__services{
+                position: relative;
                 display: flex;
                 flex-direction: column;
-                background: #222;
-                transform-origin: top center;
-                transition-duration: 0.3s;
-                transform: scaleY(0);
+                flex-grow: 1;
+                flex-shrink: 1;
+                & > a{
+                    width: 100%;
+                }
+
+                &__dropdown{
+                    width: 100%;
+                    position: absolute;
+                    top:70px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                     & a{
+                        width: 100%;
+                        background: #222;
+                     }
+                     transform: scaleY(0);
+                     transition-duration: 0.2s;
+                     transform-origin: top center;
+                }
             }
-            &__dropdown:hover, #service:hover + &__dropdown{
+            &__services:hover > &__services__dropdown{
+                transform: scaleY(1); 
+            }
+
+            &__services:focus > &__services__dropdown{
                 transform: scaleY(1); 
             }
         }
